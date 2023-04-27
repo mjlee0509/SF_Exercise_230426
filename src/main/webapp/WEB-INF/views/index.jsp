@@ -15,9 +15,11 @@
 <%@include file="component/header.jsp"%>
 <%@include file="component/navIndex.jsp"%>
     <div class="main">
-    <pre>
         <h2>쇼핑몰 회원관리 프로그램</h2>
+        <h6>──────────────</h6>
+        <pre>
         쇼핑몰 회원정보의 회원매출정보 데이터베이스를 구축하고 회원관리 프로그램을 작성하는 프로그램이다.
+
         프로그램 작성 순서
         1. 회원정보 테이블을 생성한다.
         2. 매출정보 테이블을 생성한다.

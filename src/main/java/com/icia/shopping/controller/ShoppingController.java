@@ -26,9 +26,14 @@ public class ShoppingController {
 
     @PostMapping("/save")
     public String save(@ModelAttribute ShoppingDTO shoppingDTO, Model model) {
-        int saveResult = shoppingService.save(shoppingDTO);
-        model.addAttribute("result", saveResult);
-        return "saveResult";
+        boolean saveResult = shoppingService.save(shoppingDTO);
+        if(saveResult) {
+            return "redirect:/list";
+        } else {
+            return "/error";
+        }
+//        model.addAttribute("result", saveResult);
+//        return "saveResult";
     }
 
     @GetMapping("/list")

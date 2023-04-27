@@ -86,9 +86,13 @@ button:hover {
 }
 .footer {
     background-color: black;
-    text-align: center;
-    height: 100%;
-    top: 0;
+    height: 30%;
 }
 
+.footer p {
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+}
 

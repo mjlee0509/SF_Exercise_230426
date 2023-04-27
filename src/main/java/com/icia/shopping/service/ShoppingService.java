@@ -13,9 +13,8 @@ public class ShoppingService {
     @Autowired
     public ShoppingRepository shoppingRepository;
 
-    public int save(ShoppingDTO shoppingDTO) {
-        int result = shoppingRepository.save(shoppingDTO);
-        return result;
+    public boolean save(ShoppingDTO shoppingDTO) {
+        return shoppingRepository.save(shoppingDTO);
     }
 
 

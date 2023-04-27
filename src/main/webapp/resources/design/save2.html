@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/save" method="post" id="save-form">
+  <input type="text" name="email" id="email">
+  <input type="text" name="password" id="password">
+  <input type="submit" value="로그인">
+</form>
+</body>
+<script>
+  const saveForm = document.getElementById("save-form");
+  saveForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = document.getElementById("email");
+    if(email.value == "") {
+        alert("이메일을 입력하세요");
+        email.focus();
+    } else if (password.value == "") {
+        alert("비밀번호를 입력하세요")
+        password.focus();
+    } else {
+        saveForm.submit();
+    }
+
+  })
+</script>
+</html>

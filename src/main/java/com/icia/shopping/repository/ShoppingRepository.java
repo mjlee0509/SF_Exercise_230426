@@ -11,9 +11,14 @@ import java.util.List;
 public class ShoppingRepository {
     @Autowired
     private SqlSessionTemplate sql;
-    public int save(ShoppingDTO shoppingDTO) {
-        return sql.insert("Shopping.save", shoppingDTO);
-
+    public boolean save(ShoppingDTO shoppingDTO) {
+        try {
+            sql.insert("Shopping.save", shoppingDTO);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public List<ShoppingDTO> findAll() {

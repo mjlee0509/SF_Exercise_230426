@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="/resources/css/save.css">
+</head>
+<body>
+<div class="header">
+  <h1>쇼핑몰 회원관리</h1>
+</div>
+<div class="nav">
+  <a href="/save" style="background-color: #17ff00; color: black">회원등록</a>
+  <a href="/list">회원목록조회/수정</a>
+  <a href="/">회원매출조회</a>
+  <a href="/">홈으로</a>
+</div>
+<div class="main">
+  <h2>회원등록</h2>
+  <form action="/save" method="post" name="saveForm">
+    회원이름 :: <input type="text" name="custname" id="cust-name"> <br>
+    전화번호 :: <input type="text" name="phone" ic="phone"> <br>
+    회원주소 :: <input type="text" name="address" id="address"> <br>
+    가입일자 :: <input type="text" name="joindate" placeholder="yyyy-MM-dd" id="join-date"> <br>
+    회원등급 :: <input type="text" name="grade" placeholder="A:VIP, B:일반, C:직원" id="grade"> <br>
+    도시코드 :: <input type="text" name="city" id="city"> <br>
+    <input type="button" value="등록" onclick="input_check()">
+    <input type="button" value="조회" onclick="show_list()">
+  </form>
+</div>
+<div class="footer">
+  <p>HRDKOREA Copyright&copy;2016 All rights reserved. Human Resources Development Service of Korea</p>
+</div>
+</body>
+<script>
+  const input_check = () => {
+    const custName = document.getElementById("cust-name");
+    if (custName.value == "") {
+      alert("이름을 입력해주세요")
+      custName.focus();
+    } else {
+      document.saveForm.submit()
+    }
+  }
+</script>
+</html>
