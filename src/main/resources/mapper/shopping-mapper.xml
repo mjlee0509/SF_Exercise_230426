@@ -15,7 +15,7 @@
         select * from member_tbl_02 where custno=#{custno}
     </select>
     <update id="update" parameterType="shopping">
-        update member_tbl_02 set custname=#{custname}, phone=#{phone}, address=#{address}, grade=#{grade}, city=#{city}
+        update member_tbl_02 set custname=#{custname}, phone=#{phone}, address=#{address}, joindate=#{joindate}, grade=#{grade}, city=#{city}
                           where custno=#{custno}
     </update>
     <delete id="delete" parameterType="Long">

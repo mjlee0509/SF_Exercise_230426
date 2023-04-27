@@ -1,0 +1,56 @@
+.header {
+    background-color: black;
+    text-align: center;
+    height: 100px;
+    top: 0;
+}
+
+.header h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: auto;
+    color: white;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #9f9f9f;
+    height: 40px;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+.nav a:hover {
+    background-color: #17ff00;
+    color: black;
+}
+
+.main {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding-bottom: 100px;
+}
+
+pre {
+    text-align: center;
+    margin: auto;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    height: 100%;
+    top: 0;
+}
+
+
+

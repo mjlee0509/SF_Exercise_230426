@@ -14,7 +14,7 @@
         console.log(result);
         if (result > 0) {
             alert("신규 회원 등록이 완료되었습니다.")
-            location.href = "/save"
+            location.href = "/list"
             // 있다가 리스트 만들고나서 여기 /list로 수정하셈
         } else {
             alert("다시 등록하세요")

@@ -9,84 +9,11 @@
 <html>
 <head>
     <title>회원등록</title>
-    <style>
-        .header {
-            background-color: black;
-            text-align: center;
-            height: 100px;
-            top: 0;
-        }
-
-        .header h1 {
-            text-align: center;
-            margin: 0 auto;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            width: auto;
-            color: white;
-        }
-
-        .nav {
-            overflow: hidden;
-            background-color: #9f9f9f;
-            height: 40px;
-        }
-
-        .nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            padding: 10px 30px;
-        }
-
-        .nav a:hover {
-            background-color: #17ff00;
-            color: black;
-        }
-
-        .main {
-            background-color: rgb(255, 255, 255);
-            height: auto;
-            padding-bottom: 100px;
-        }
-
-        .main h2 {
-            text-align: center;
-            margin: 0 auto;
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-
-        .main form {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-
-
-        .footer {
-            background-color: black;
-            text-align: center;
-            height: 100%;
-            top: 0;
-        }
-
-
-
-    </style>
+    <link rel="stylesheet" href="/resources/css/save.css">
 </head>
 <body>
-<div class="header">
-    <h1>쇼핑몰 회원관리</h1>
-</div>
-<div class="nav">
-    <a href="/save" style="background-color: #17ff00; color: black" >회원등록</a>
-    <a href="/list">회원목록조회/수정</a>
-    <a href="/">회원매출조회</a>
-    <a href="/">홈으로</a>
-</div>
+<%@include file="component/header.jsp"%>
+<%@include file="component/navSave.jsp"%>
 <div class="main">
     <h2>회원등록</h2>
     <form action="/save" method="post">
@@ -100,9 +27,7 @@
         <input type="button" value="조회" onclick="show_list()">
     </form>
 </div>
-<div class="footer">
-
-</div>
+<%@include file="component/footer.jsp"%>
 </body>
 <script>
     // const joindate = () => {

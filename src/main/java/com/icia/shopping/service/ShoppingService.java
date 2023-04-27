@@ -21,11 +21,12 @@ public class ShoppingService {
 
     public List<ShoppingDTO> findAll() {
         List<ShoppingDTO> shoppingDTOList = shoppingRepository.findAll();
-        if (shoppingDTOList.size() == 0) {
-            return null;
-        } else {
-            return shoppingDTOList;
-        }
+//        if (shoppingDTOList.size() == 0) {
+//            return null;
+//        } else {
+//            return shoppingDTOList;
+//        }
+        return shoppingDTOList;
     }
 
     public void update(ShoppingDTO shoppingDTO) {

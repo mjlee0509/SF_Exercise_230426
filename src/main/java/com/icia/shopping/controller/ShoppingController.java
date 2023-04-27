@@ -34,11 +34,19 @@ public class ShoppingController {
     @GetMapping("/list")
     public String findAll(Model model) {
         List<ShoppingDTO> shoppingDTOList = shoppingService.findAll();
-        for (ShoppingDTO shoppingDTO : shoppingDTOList) {
-            System.out.println("shoppingDTO = " + shoppingDTO);
-        }
+//        for (ShoppingDTO shoppingDTO : shoppingDTOList) {
+//            System.out.println("shoppingDTO = " + shoppingDTO);
+//        }
         model.addAttribute("memberList", shoppingDTOList);
         return "list";
+    }
+
+    @GetMapping("/search")
+    public String findById(@RequestParam("custno") Long custno, Model model) {
+        ShoppingDTO searchResult = shoppingService.findById(custno);
+        model.addAttribute("member", searchResult);
+        System.out.println("custno = " + custno + ", model = " + model);
+        return "update";
     }
 
     @GetMapping("/update")
@@ -51,7 +59,7 @@ public class ShoppingController {
     @PostMapping("/update")
     public String update(@ModelAttribute ShoppingDTO shoppingDTO) {
         shoppingService.update(shoppingDTO);
-        return "redirect:/update?custno="+shoppingDTO.getCustno(); // <-- 흠...
+        return "redirect:/list?custno="+shoppingDTO.getCustno(); // <-- 흠...
     }
 
     @GetMapping("/delete")
